@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<div>
+<head>
+    <title>게시판</title>
+    <style>
+        .board{
+            width: 600px;
+            height: 300px;
+            background-color: hsl(35, 50%, 91%);
+
+        } 
+
+        .post-title{
+            color: darkblue; /*css 주석 제목의 글자 색상을 darkblue로 설정*/
+            background-color: aqua;
+        }
+
+
+        .post{
+            padding: 10px;
+            background-color: #f569ed;
+            margin-bottom: 20px;
+        }
+
+
+
+    </style>
+</head>
+    <body>
+    <div>
+        <div class="board">
+            <h1> 게시판입니다.</h1>
+            <div class="post">
+                <div class="post-title"></div>
+                    <div class="post-content">이것은 첫 번째 게시물의 내용입니다.</div>
+
+            </div><!--구획을 정의하며 스타일및 레이아웃에 사용-->
+                
+                <div class="board">
+                    <div class="post">
+                        <div class="post-title">두 번째 게시물</div>
+                        <div class="post-content">이것은 두 번째 게시물의 내용입니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    </body>
+</html>
