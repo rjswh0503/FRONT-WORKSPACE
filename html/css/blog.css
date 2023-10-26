@@ -58,4 +58,11 @@ text-align: center;
 
 }
 
+.p {
+    background-color: #f5f5f5;
+    border: 1px double orange;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
 
