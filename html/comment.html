@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/comment.css">
+    </head>
+    <body>
+        <h1>방명록</h1>
+        <p>방명록 적어주세요.</p>
+        <header class="header">
+            <h2>방명록</h2>
+        </header>
+        <div class="comment"> 
+            <input id="commentInput" placeholder="방명록 작성하기">
+            <button onclick="addComment()">작성완료</button>
+            <div class="commen" >
+                <div id="comments">
+                    <!-- 댓글이 표시될 장소 -->
+                </div>
+            </div>    
+        </div>
+    </body>
+    <foot></foot>
+    <script>
+        function addComment(){
+            const commentInput = document.getElementById("commentInput");
+            const commentText = commentInput.value;
+
+            if(commentText.trim() === ""){
+                alert("댓글을 작성해주세요.");
+                return;
+            }
+
+
+
+
+
+
+            const commentsBox = document.getElementById("comments");
+
+            const commentDIV = document.createElement("div");
+
+            commentDIV.className = "comment";
+
+            commentDIV.textContent = commentText;
+
+            commentsBox.appendChild(commentDIV);
+
+            commentInput.value="";
+
+
+
+
+        }
+
+
+    </script>
+</html>

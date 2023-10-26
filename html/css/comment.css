@@ -1,0 +1,18 @@
+.header{
+    background: linear-gradient(#22c1c3, #fdbb2d);
+    padding: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+
+
+}
+
+.commen{
+    background-color: #f1f1f1;
+    padding: 50px;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+
+}

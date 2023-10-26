@@ -3,74 +3,72 @@
     <head>
         <title>블로그</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/blog.css">
+    
+        <style>
+            
+        </style>
     </head>
-    <style>
-        header{
-            background-color: cadetblue;
-            padding: 20px;
-            text-align: center;
-            font-size: 15px;
-            color: white;
-        
-        }
-        nav{
-            float: left;
-            width: 25%;
-            height: 300px;
-            background: rgb(12, 218, 245);
-            padding: 20px;
-        }
-
-        nav ul{
-            list-style-type: none;
-            padding: 0;
-        }
-
-        article{
-            float: left;
-            padding: 10px;
-            width: 70%;
-            background-color: #f1f1f1;
-            height: 300px;
-
-        }
-        
-        section ::after{
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        footer {
-            background-color: #f1f1f1;
-            padding: 10px;
-            text-align: center;
-        }
-        
-
-        
-    </style>
     <body>
         <h2>블로그 메인</h2>
         <p>안녕하세요. 여기는 블로그 메인입니다.</p>
         <header>
-            <h2>배너</h2>
+            <h2>Blog</h2>
         </header>
         <section>
             <nav>
                 <ul>
-                    <li>블로그소개</li>
-                    <li>글 목록</li>
-                    <li>방명록</li>
+                    <li class="list">블로그소개</li>
+                    <li class="list">글 목록</li>
+                    <li class="list"><a href="./comment.html">방명록</a></li>
+            
                 </ul>
             </nav>    
                 <article>
-                    <h1>초보 개발자의 블로그 </h1>
-                    <p>개발 </p>
+                    <h1>방명록 </h1>
+                    <div class="comment">
+                        <input id="commentInput" placeholder="덧글쓰기">
+                        <button onclick="addComment()">작성</button>
+                        <div id="comments">
+                         <!--댓글이 표시될 장소-->
+                        </div>
+                    </div>
+
+                    
                 </article>
+                
         </section>
-        <footer>
-            <p>블로그 소개 | 글 보기 | 블로그 홈</p>
-        </footer>
+
+        
     </body>
+    <footer>
+            
+        <p>블로그 소개 | 글 보기 | 블로그 홈</p>
+
+
+
+    </footer>
+    <script>
+        function addComment(){
+            const commentInput = document.getElementById("commentInput");
+            const commentText = commentInput.value;
+
+            if(commentText.trim() === ""){
+                alert("댓글을 작성해주세요.");
+                return;
+            }
+
+            const commentsBox = document.getElementById("comments");
+            const commentDIV = document.createElement("div");
+
+            commentDIV.className = "comment";
+            commentDIV.textContent = commentText;
+            commentsBox.appendChild(commentDIV);
+            commentInput.value="";
+
+        }
+
+        
+        
+    </script>
 </html>
