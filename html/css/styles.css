@@ -1,0 +1,66 @@
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    /*마우스 호버 시 가져갈 시 색상 반짝이는 효과 추가*/
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+    /*마우스 호버 스타일 변경*/
+    button:hover {
+        background-color: #0056b3;
+        box-shadow: 20px 20px 5px rgb(20, 26, 239/40%);
+
+
+    }
+    
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+
+    }
+    .post{
+        background-color: #f5f5f5;
+        border: 1px double #ccc;
+        /*solid : 실선, dotted : 점선, dashed : 대시, none : 테두리없음 */
+        padding: 10px;
+        margin-bottom: 10px;
+
+
+    }
+
+
+    .post-list{
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    .post-list li{
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    .form-container{
+        margin-top: 20px;
+
+
+    }
+
+    .form-container input[type = "text"],
+
+    .form-container textarea{
+        width: 100%;
+        padding : 10px;
+        margin-bottom: 10px;
+
+
+
+
+    }

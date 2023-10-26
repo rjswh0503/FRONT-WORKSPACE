@@ -1,49 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-
-            button {
-                background-color: #007bff;
-                color: #fff;
-                padding: 10px 20px;
-                cursor: pointer;
-                box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-                /*마우스 호버 시 가져갈 시 색상 반짝이는 효과 추가*/
-                transition: background-color 0.3s, box-shadow 0.3s;
-            }
-                /*마우스 호버 스타일 변경*/
-                button:hover {
-                    background-color: #0056b3;
-                    box-shadow: 20px 20px 5px rgb(20, 26, 239/40%);
-
-
-                }
-                
-                .container{
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-
-                h1 {
-                    text-align: center;
-
-                }
-
-
-
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+        <div>
         <body>
             <div class="container">
                 <h1>점심 게시판</h1>
-                <ul>
+
+                <ul class="post-list">
                     <!--게시물 목록 작성하는 곳-->
-                    <li>
+                    <li class="post">
                         <h2>맥주창고 역삼점</h2>
                         <p>메뉴 더보기 -> <a href="https://www.instagram.com/lunch_mz/?hl=ko">클릭</a></p>
                     </li>
-                    <li>
+                    <li class="post">
                         <h2>명동칼국수 역삼점</h2>
                         <p>명동칼국수 9000원</p>
                     </li>
@@ -51,22 +22,18 @@
 
 
 
-                <div>
+                <div class="form-container">
                     <!--메뉴 추가하는 추가란-->
                     <h2>새 게시물 작성하기</h2>
-                    <form>
+                    <form class="post-form">
                         <input type="text" placeholder="제목"><br><br>
                         <textarea placeholder="내용작성하기"></textarea>
                         <h2>새 게시글 작성</h2>
                         <button type="submit">작성완료</button>
                     </form>
-
-
-                </div>   
+                </div> 
+                
+                
             </div>
         </body>
-
-    </head>
-
-
 </html>
