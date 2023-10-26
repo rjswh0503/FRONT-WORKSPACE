@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>블로그</title>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        header{
+            background-color: cadetblue;
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+        
+        }
+        nav{
+            float: left;
+            width: 25%;
+            height: 300px;
+            background: rgb(12, 218, 245);
+            padding: 20px;
+        }
+
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article{
+            float: left;
+            padding: 10px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+
+        }
+        
+        section ::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        
+
+        
+    </style>
+    <body>
+        <h2>블로그 메인</h2>
+        <p>안녕하세요. 여기는 블로그 메인입니다.</p>
+        <header>
+            <h2>배너</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li>블로그소개</li>
+                    <li>글 목록</li>
+                    <li>방명록</li>
+                </ul>
+            </nav>    
+                <article>
+                    <h1>초보 개발자의 블로그 </h1>
+                    <p>개발 </p>
+                </article>
+        </section>
+        <footer>
+            <p>블로그 소개 | 글 보기 | 블로그 홈</p>
+        </footer>
+    </body>
+</html>
