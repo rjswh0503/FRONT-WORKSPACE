@@ -18,7 +18,9 @@
                 <input type="text" id="title" name="title" required>
                 <label for="content">내용 : </label>
                 <textarea id="content" name="content" required></textarea>
-                <button type="submit">게시하기</button>
+                <div class="button">
+                    <button type="submit">게시</button>
+               </div>
             </form>
 
         </div>
@@ -42,6 +44,8 @@
 
                     };
                     postArray.push(post); //게시물을 배열에 추가
+                    
+
 
 
                     //새 게시물을 담아줄 div 생성
@@ -52,9 +56,73 @@
                     <p>${content}</p>
                     <p>게시일 : ${date.toLocaleString()}</p>
 
-
                     `;
+
+                    //삭제버튼 생성 
+                    const deleteButton = document.createElement("button");
+                    deleteButton.classList.add("delete-button");
+                    deleteButton.innerHTML = "삭제하기";
+                    deleteButton.addEventListener("click",() => {
+                        postArray.splice(postArray.indexOf(post),1);
+                        posts.removeChild(postDIV);
+
+                    });
+
+                    //댓글 폼 생성
+
+                    const commentform = document.createElement("form");
+                    commentform.innerHTML = `
+                        <input type="text" name="comment" placeholder="댓글추가하기" required>
+                        <button type="submit">게시</button>
+                    
+                    `;
+
+                    commentform.addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const commentText = commentform.comment.value;
+                        const comment = {
+                           text : commentText,
+                           date : new Date(),
+                        };
+                        
+                        post.comments.push(comment);
+                        const commentDIV = document.createElement("div");
+                        commentDIV.classList.add("comment");
+                        commentDIV.innerHTML = `
+                            <p>${commentText}</p>
+                            <p>게시일 : ${comment.date.toLocaleString()}</p>
+                        `;
+
+
+                        //댓글 입력 초기화
+
+                        commentform.comment.value = "";
+                        postDIV.appendChild(commentDIV);
+
+                    });
+
+
+                    postDIV.appendChild(deleteButton);
+                    postDIV.appendChild(commentform);
+
+                    //게시글 목록 추가
                     posts.appendChild(postDIV);
+                    //게시글 입력 초기화
+                    postForm.title.value = "";
+                    postForm.content.value = "";
+
+
+
+                    /*
+                    margin : 20px 상 하 좌 우 모두 20px
+
+                    margin : 20px 0 상하 20px 좌우 0
+
+                    margin : 10px        20px        30px        40px 
+                           위10px 오른쪽(20px)  아래 (30px)  왼쪽(40px)
+                    
+                    */
+
 
 
 

@@ -1,0 +1,92 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+textarea {
+    width: 80px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+
+}
+#button {
+    display: block;
+    margin: 20%;
+    
+    
+}
+
+#saveButton {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+#saveButton:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+
+#saveButton:focus {
+    outline: none;
+}
+
+
+#saveButton {
+    background-image: linear-gradient(to right, #25aae1,#40e495,#30dd8a,#2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+
+            
+
+
+
+
+
+
+

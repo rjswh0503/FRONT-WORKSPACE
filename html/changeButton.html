@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>버튼 활성화 비활성화</title>
+    </head>
+    <body>
+        <button id="buttonA">활성화 버튼</button>
+    <button id="buttonB" disabled>비활성화 버튼</button>
+
+
+
+
+
+        <script>
+            //버튼요소 가져오기
+            const buttonA = document.getElementById('buttonA');
+            const buttonB = document.getElementById('buttonB');
+
+            //활성화 버튼을 클릭할 때 실행할 함수
+            buttonA.addEventListener('click', () => {
+                //활성화 버튼 클릭시 다른 버튼 활성화
+                                                //비활성화 시키겠다.
+
+                buttonA.setAttribute('disabled', true);
+                buttonB.removeAttribute('disabled')
+            });
+
+
+
+            //B버튼을 클릭할 때 실행할 함수
+            buttonB.addEventListener('click', () => {
+                //활성화 버튼 클릭시 다른 버튼 활성화
+                                                //비활성화 시키겠다.
+
+                buttonB.setAttribute('disabled', true);
+                buttonA.removeAttribute('disabled')
+            });
+
+
+
+
+
+        </script>
+
+    </body>
+    
+    
+
+
+
+
+
+</html>

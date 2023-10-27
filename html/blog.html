@@ -26,11 +26,25 @@
             </nav>    
                 <article>
                     <h2 style="text-align: center;">초보자</h2>
-                    <p class="p"> 초보 입니다.</p>
+                    <p>초보</p>
+                    <div class="buttons">
+                        <button class="btn-hover color-1">게시판으로 이동</button>
+
+                        
+                    </div>
                     
                 </article>
+            
                 
         </section>
+        <form>
+            
+            
+        </form>
+
+
+
+
 
         
     </body>
@@ -60,6 +74,18 @@
             commentInput.value="";
 
         }
+
+        const commentform = document.createElement("form");
+        commentform.innerHTML = `
+            <input type = "text" name="comment" placeholder="댓글추가" required>
+            <button type="submit">게시</button>
+        `;
+
+
+
+
+
+
 
         
         

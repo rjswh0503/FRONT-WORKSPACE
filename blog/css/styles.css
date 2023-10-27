@@ -1,9 +1,13 @@
 
 
 *{
-    box-sizing: border-box;
-
+    box-sizing: border-box ;
 }
+    
+    
+
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f3f3f3;
@@ -71,5 +75,12 @@ button[type="submit"]{
     cursor: pointer;
 }
 
+.delete-button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
 
 
