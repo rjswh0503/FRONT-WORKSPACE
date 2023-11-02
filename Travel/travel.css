@@ -1,0 +1,85 @@
+div{
+    text-align: center;
+    padding: 100px;
+}
+
+
+h1 {
+    text-align: center;
+
+}
+
+
+
+
+.tokyo, .osaka, .fukuoka, .shizoka, .nagasaki,.nagoya {
+    width: 130px;
+    height: 30px;
+    background: linear-gradient(33deg, #d7d79f, #e5e5b9);
+    border: 2px solid #f8f8ea;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 60px;
+    float: left;
+    list-style-type: none;
+    cursor: pointer;
+
+}
+
+
+
+
+@media (max-width:600px){
+    nav,article{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+
+body {
+    background-color: #111111;
+    color: #fff;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 520px;
+    text-align: center;
+
+}
+
+#container h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0.3125em 0;
+    background-color: #111111;
+    position: relative;
+    display: 0 10px;
+    padding: 0 10px;
+}
+
+.style-1 {
+    font-family: "Pacifico", sans-serif;
+    text-transform: non!important;
+}
+
+.style-1::before {
+    content: "";
+    height: 3px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: absolute;
+    width: 300%;
+    top: 50%;
+    left: -100%;
+    z-index: -999;
+}
+
