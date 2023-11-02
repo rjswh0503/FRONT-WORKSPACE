@@ -1,0 +1,40 @@
+/*슬라이더 컨테이너 스타일*/
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s;
+
+}
+
+.slider img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
