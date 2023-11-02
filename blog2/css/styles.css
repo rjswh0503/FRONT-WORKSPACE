@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.nav1 {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    float: inline-end;
+}
+
+
+.nav1 .logo img {
+    width: 100px;
+}
+
+
+.nav1 .nav_but a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+
+}
+
+#ww_e25b1873873ac {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px skyblue;
+}
+
+.page {
+    margin: 0px ;
+   
+
+}
+
+
+html,body {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+
+}
+
+nav {
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-300px);
+    height: 100%;
+    width: 400px;
+    transition: all 800ms cubic-bezier(.8,0, .33, 1);
+}
+
+nav .menu_btn .line.line--1 {
+    width: 30px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu_btn .line.line--2 {
+    width: 28px;
+    transform: translateX(0);
+
+}
+
+nav .menu_btn .line.line--2.line-fade-out {
+    width: 28px;
+    transform: translate(30px);
+    opacity: 0;
+}
+
+nav .menu_btn .line.line--3 {
+    width: 20px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu_btn.line.line--3.line-cross {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-10px);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+nav .nav-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 900ms cubic-bezier(.9,0,.33,1);
+}
+
+nav .nav-links.fade-in {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+nav .nav-links .link {
+    
+}
+
+.inform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255,255, 255, 255);
+    font-size: 2rem;
+    font-family: sans-serif;
+    letter-spacing: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
