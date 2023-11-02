@@ -21,32 +21,30 @@
                     <li class="list">블로그소개</li>
                     <li class="list"><a href="../blog/blog-board.html">게시판</a></li>
                     <li class="list"><a href="./comment.html">방명록</a></li>
+                    
             
                 </ul>
             </nav>    
                 <article>
-                    <h2 style="text-align: center;">초보자</h2>
-                    <p>초보</p>
+                    <h2 style="text-align: center;">메인</h2>
                     <div class="buttons">
                         <button class="btn-hover color-1">게시판으로 이동</button>
-
-                        
                     </div>
-                    
                 </article>
-            
-                
+                <input type="file" id="fileInput" accept="image/*">
+                <button id="uploadButton">업로드</button>
+                <div id="imageContainer" style="max-width: 50%;">
+
+                    <img id="uploadImage">
+                </div>
         </section>
-        <form>
+
+        <section>
             
             
-        </form>
-
-
-
-
-
+        </section>
         
+
     </body>
     <footer>
             
@@ -80,14 +78,32 @@
             <input type = "text" name="comment" placeholder="댓글추가" required>
             <button type="submit">게시</button>
         `;
+    </script>
+    <script>
+        document.getElementById("uploadButton").addEventListener("click", function(){
+            var fileInput = document.getElementById("fileInput");
+            var uploadImage = document.getElementById("uploadImage");
+            var imageContainer = document.getElementById("imageContainer");
 
 
+            if(fileInput.files.length >0){
+                var file = fileInput.files[0];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    uploadImage.src = e.target.result;
+                    imageContainer.style.display = "block";
+                };
 
 
+                reader.readAsDataURL(file);
+
+            } else {
+                alert("이미지 파일을 선택하세요.");
+            }
+
+        })
 
 
-
-        
-        
     </script>
 </html>
