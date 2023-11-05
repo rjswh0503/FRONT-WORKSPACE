@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TOP 여행지</title>
+        <script src="../jQuery/js/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="">
+        <style>
+            img {
+                width: 300px;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav_but">
+            <p class="toptravel">TOP 여행지</p>
+            
+        </div>
+        <button>이미지 변경하기</button>
+        <img src="../jQuery/img/1.jpg" alt="one">
+        <img src="../jQuery/img/2.jpg " alt="two">
+        <img src="../jQuery/img/3.jpg">
+
+
+
+        <script>
+
+            $(function(){
+                $("button").on("click", function(){
+                    $("img[alt='one']").attr("src", "../jQuery/img/5.jpg")
+                });
+            });
+
+
+        </script>
+
+    </body>
+</html>

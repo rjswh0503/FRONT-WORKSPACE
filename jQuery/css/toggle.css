@@ -1,0 +1,5 @@
+p {
+    display: none;/*display : none 화면에서 태그나 무언가를 숨길 때 사용 */
+    color: blue;
+    transform: translateX(25%);
+}

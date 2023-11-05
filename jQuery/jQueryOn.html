@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이벤트 on</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>"
+        <script>
+            $(function(){
+                $("button").on({
+                    //mouseenter : 마우스가 특정 요소에 진입할 때 실행되는 이벤트를 등록
+                    mouseenter:function(){
+                        $("#text").append("마우스가 영역을 침범했습니다.!!!!!!!!!!!!!!!!!!!!!!<br>");
+                    },
+                    click:function() {
+                        $("#text").append("마우스가 버튼을 클릭 했습니다.!<br>");
+                    }
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+        <h1>1. on 메소드</h1>
+        <button>마우스를 올려보세요</button>
+        <p id="text"></p>
+    </body>
+</html>
