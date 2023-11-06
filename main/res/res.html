@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+    <body>
+        <form name="join_form" action="" method="get" id="join_form" onsubmit="return form_check()">
+          <fieldset>
+            <legend>회원가입</legend>
+            <p>
+              <label for="u_name">이름</label>
+              <input type="text" name="u_name" id="u_name">
+              <br>
+              <span class="err_name"></span>
+            </p>
+            
+           
+
+
+
+
+
+
+            <p>
+              <label for="u_id">아이디</label>
+              <input type="text" name="u_id" id="u_id">
+              <button type="button">아이디 중복확인</button> 
+              <br>
+              <span class="err_id">* 4~12글자까지만 입력 가능합니다.</span>
+                
+
+
+
+
+
+            </p>
+            <p>
+              
+              <label for="pw">비밀번호</label>
+              <input type="text" name="pwd" id="pwd"> 
+              <br>
+              <span class="err_pwd">* 4~12글자까지만 입력 가능합니다.</span>
+            </p>
+            
+
+
+
+            <p>
+              <label for="repwd">비밀번호 확인</label>
+              <input type="text" name="repwd" id="repwd">
+              <br>
+              <span class="err_repwd"></span>
+            </p>
+            
+            
+            
+            <p>
+              <label for="Birth">생년월일</label>
+           
+              <div class="info" id="info__birth">
+                <select class="box" id="birth-year">
+                  <option disabled selected>출생 연도</option>
+                  <script>
+                  const birthYearEl = document.querySelector('#birth-year')
+                  isYearOptionExisted = false;
+                  birthYearEl.addEventListener('focus', function () {
+                  if(!isYearOptionExisted) {
+                isYearOptionExisted = true
+                for(var i = 1940; i <= 2022; i++) {
+                            const YearOption = document.createElement('option')
+                YearOption.setAttribute('value', i)
+                YearOption.innerText = i
+                               this.appendChild(YearOption);
+              }
+                 }
+                });
+
+                  </script>
+                              
+                  </div>
+                </select>
+                <select class="box" id="birth-month">
+                  <option disabled selected>월</option>
+                  <script>
+                    const birthMonthEl = document.querySelector('#birth-month')
+                    isMonthOptionExisted = false;
+                    birthMonthEl.addEventListener('focus', function(){
+                      if(!isMonthOptionExisted){
+                        isMonthOptionExisted = true
+                        for(var i = 1; i<= 12; i++){
+                          const MonthOption = document.createElement('option')
+                          MonthOption.setAttribute('value',i)
+                          MonthOption.innerText = i
+                          this.appendChild(MonthOption)
+                        }
+                      }
+                    });
+                    
+                  </script>
+                </select>
+                <select class="box" id="birth-day">
+                  <option disabled selected>일</option>
+                  <script>
+                    const birthDayEl = document.querySelector('#birth-day')
+                    isDayOptionExisted = false;
+                    birthDayEl.addEventListener('focus', function(){
+                      if (!isDayOptionExisted) {
+                        isDayOptionExisted = true
+                        for(var i = 1; i<= 31; i++){
+                          const DayOption = document.createElement('option')
+                          DayOption.setAttribute('value',i)
+                          DayOption.innerText = i
+                          this.appendChild(DayOption)
+                        }
+                        
+                      }
+                    });
+                  </script>
+                </select>
+              <br>
+              
+            </p>
+            <p>
+              <label for="gender">성별</label>
+              <input type="radio" name="gender" value="man">남
+              <input type="radio" name="gender" value="woman">여
+            </p>
+
+
+
+            <p>
+              <label for="email_id">이메일</label>
+              <input type="text" name="email_id" id="email_id"> @
+              <input class="box" id="domain-txt" type="text"/>
+              <select class="box" id="domain-list">
+              <option value="naver.com">naver.com</option>
+              <option value="google.com">google.com</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="nate.com">nate.com</option>
+              <option value="kakao.com">kakao.com</option>
+            </select>
+            </p>
+            <p>
+              <label for="mobile">전화번호</label>
+              <input type="text" name="mobile" id="mobile">
+              <br>
+              <span class="err_mobile">* '-'없이 숫자만 입력</span>
+            </p>
+            <p>
+              <input type="checkbox" name="agree" id="agree">
+              <label for="agree">약관 동의</label>
+              <br>
+              <span class="err_agree">* 필수</span>
+            </p>
+            <p class="final_btn">
+              <button type="button" class="btn">이전으로</button>
+              <button type="submit" class="btn">회원가입</button>
+            </p>
+          </fieldset>
+        </form>
+        <script src="join.js" type="text/javascript"></script>
+      </body>
+
+
+
+</html>
