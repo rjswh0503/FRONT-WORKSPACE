@@ -61,7 +61,7 @@ img {
 }
 
 .card__img {
-    width: 328px;
+    width: 330px;
     border-radius: 1.5rem;
 }
 
@@ -98,7 +98,7 @@ img {
     text-decoration: none;
     font-size: var(--small-font-size);
     font-weight: 500;
-    color: var(--first-color);
+    color: var(--fist-color);
 }
 
 .card__button:hover {
